@@ -106,33 +106,37 @@
 }
 
 .title {
-    margin: 30px 0px;
-    color: var(--red);
+    margin: 20px 0px;
 }
 
 .title h2 {
     font-size: var(--fs-large);
     font-weight: 700;
+    color: var(--blue);
+    display: inline;
+    padding: 10px 0px;
+    display: inline-block;
+    border-bottom: 3px solid var(--blue);
 }
 
-.content .name {
+.news .name {
     margin: 10px 0px;
 }
 
-.content .img {
+.news .img {
     min-height: 20vw;
     overflow: hidden;
 }
 
-.content .img img {
+.news .img img {
     transition: transform 0.5s linear;
 }
 
-.content .img:hover img {
+.news .img:hover img {
     transform: scale(1.2);
 }
 
-.content .name a {
+.news .name a {
     text-decoration: none;
     color: black;
     text-align: justify;
@@ -141,31 +145,31 @@
     font-weight: 700;
 }
 
-.content .description {
+.news .description {
     opacity: 0.8;
     font-size: var(--fs-medium);
 }
 
-.content .time {
+.news .time {
     margin-top: 10px;
 }
 
-.small .content {
+.small .news {
     display: flex;
 }
 
-.small .content .img {
+.small .news .img {
     min-height: unset;
     height: fit-content;
     min-width: 25%;
     margin-right: 10px;
 }
 
-.small .content .name {
+.small .news .name {
     margin: 0px;
 }
 
-.small .content .name a {
+.small .news .name a {
     font-size: var(--fs-small);
     text-overflow: ellipsis;
     overflow: hidden;
@@ -174,12 +178,12 @@
     -webkit-box-orient: vertical;
 }
 
-.small .content .description {
+.small .news .description {
     display: flex;
     flex-direction: column;
 }
 
-.small .content .description p {
+.small .news .description p {
     text-overflow: ellipsis;
     overflow: hidden;
     display: -webkit-box;
@@ -187,15 +191,65 @@
     -webkit-box-orient: vertical;
 }
 
-.small .content {
+.small .news {
     margin: 20px 0px;
 }
 
+.notice {
+    --size: 100px;
+    --date-ratio: 0.7;
+    position: relative;
+    height: var(--size);
+    display: flex;
+    align-items: center;
+    margin: 10px 0px;
+}
+
+.notice .date {
+    height: calc(var(--size) *var(--date-ratio));
+    width: calc(var(--size) *var(--date-ratio));
+    background-color: var(--green);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    line-height: 1.5em;
+    position: absolute;
+}
+
+.notice .date .month {
+    border-top: 2px solid white;
+}
+
+.notice .content {
+    background-color: whitesmoke;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: calc(var(--size) * 0.1) calc(var(--size) * (var(--date-ratio) - 0.2));
+    margin-left: calc(var(--size) * var(--date-ratio) * 0.5);
+}
+
+.notice .content p {
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.notice .content span {
+    opacity: 0.8;
+}
+
+.notice .content span span {
+    color: var(--green);
+}
+
 @media (max-width: 740px) {
-    .small .content {
+    .small .news {
         flex-direction: column;
     }
-    .small .content .img {
+    .small .news .img {
         margin-right: 0px;
     }
      :root {
