@@ -1,0 +1,119 @@
+header {
+    width: 100%;
+    background-color: white;
+}
+
+header #main-menu {
+    z-index: 1;
+    position: relative;
+    height: auto;
+}
+
+header .menubar {
+    --height: 50px;
+    background-color: var(--blue);
+    height: auto;
+    min-height: var(--height);
+}
+
+header .menu-item {}
+
+header .menu-item a {
+    color: white;
+}
+
+header .menu-item:hover>a {
+    color: var(--yellow)
+}
+
+header .dropdown-menu:hover .dropdown-content {
+    box-shadow: 0px 2px 12px rgb(26 27 134 / 10%);
+    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    background-color: white;
+}
+
+header .dropdown-content a {
+    color: black;
+    font-size: var(--fs-medium);
+    margin: 10px 15px;
+}
+
+header .navbar {
+    justify-content: space-between;
+    align-items: center;
+    height: var(--height);
+}
+
+header .nav-btn {
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: var(--height);
+    cursor: pointer;
+}
+
+header .language-setting {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header .language-setting img {
+    height: 20px;
+}
+
+header .login {
+    font-size: 25px;
+    margin-left: 15px;
+}
+
+header .logo-bar {
+    margin: 20px 0px;
+}
+
+header .logo,
+header .slogan {
+    --logo-size: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+    height: var(--logo-size);
+}
+
+header .logo>div {
+    margin-left: 15px;
+}
+
+header .logo img {
+    height: var(--logo-size);
+    width: var(--logo-size);
+}
+
+header .logo h1 {
+    font-size: var(--fs-medium-l);
+    color: var(--blue);
+}
+
+header .logo span {
+    font-size: var(--fs-medium);
+    color: var(--red);
+    font-weight: 700;
+}
+
+header .slogan span {
+    font-size: var(--fs-large);
+    font-weight: 700;
+    color: var(--green);
+    text-align: center;
+}
+
+@media (max-width: 1199px) {
+    header .dropdown-menu:hover {
+        position: static;
+    }
+}

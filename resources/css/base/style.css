@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Roboto:wght@300;400;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    min-height: 100%;
+    font-family: 'Inter', sans-serif;
+}
+
+.nobr {
+    white-space: nowrap;
+}
+
+.nobr br {
+    display: none;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex.center {
+    justify-content: center;
+}
+
+.flex.middle {
+    align-items: center;
+}
+
+.flex.spbt {
+    justify-content: space-between;
+}
+
+.navbar {
+    display: flex;
+    list-style: none;
+}
+
+.navbar .menu-item {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu-item a {
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.dropdown-menu,
+.slide-menu {
+    position: relative;
+}
+
+.dropdown-menu-item a,
+.slide-menu-item a {
+    display: block;
+}
+
+.dropdown-menu .dropdown-content {
+    opacity: 0;
+    height: 0px;
+    width: 0px;
+    padding: 0px;
+    overflow: hidden;
+    list-style: none;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    transform: translateY(150%);
+    transition: opacity 0.3s linear, transform 0.2s linear;
+    z-index: 1;
+}
+
+.dropdown-menu:hover .dropdown-content {
+    height: auto;
+    width: auto;
+    transform: translateY(100%);
+    opacity: 1;
+}
+
+.scroll-hidden {
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.scroll-hidden::-webkit-scrollbar-thumb {
+    background: none;
+}
+
+.scroll-hidden::-webkit-scrollbar {
+    width: 10px;
+}
+
+.scroll-hidden:hover::-webkit-scrollbar-thumb {
+    background: rgb(202, 202, 202);
+    border-radius: 10px;
+}
+
+.fill-img * {
+    width: 100%;
+    display: block;
+}
+
+.fill-img.cover img {
+    object-fit: cover;
+}
+
+a {
+    outline: none;
+    text-decoration: none;
+}
