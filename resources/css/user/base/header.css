@@ -9,29 +9,100 @@ header #main-menu {
     height: auto;
 }
 
-header .menubar {
+header .headbar {
     --height: 50px;
-    background-color: var(--blue);
     height: auto;
     min-height: var(--height);
+    background-color: var(--green);
+    color: white;
+    cursor: default;
 }
 
-header .menu-item {}
+header .headbar :is(.right, .left) {
+    display: flex;
+    align-items: center;
+    height: var(--height);
+}
+
+header .headbar .right {
+    justify-content: flex-end;
+}
+
+header .social-icons a {
+    color: white;
+    margin: 0px 5px;
+    padding: 5px;
+    font-size: var(--fs-medium);
+}
+
+header .language-setting {
+    --size: 40px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header .language-setting label {
+    cursor: pointer;
+}
+
+header .language-setting input {
+    display: none;
+}
+
+header .language-setting input:checked+label img {
+    opacity: 1;
+    transform: scale(1.2);
+}
+
+header .language-setting img {
+    box-sizing: content-box;
+    height: calc(var(--size) / 1.7);
+    width: var(--size);
+    opacity: 0.7;
+}
+
+header .language-setting label:not(:first-child) {
+    margin-left: 10px;
+}
+
+header .menubar {
+    --height: 50px;
+    height: auto;
+    min-height: var(--height);
+    display: flex;
+    z-index: 1;
+}
+
+header .menubar .grid {
+    border-top: 3px solid var(--yellow);
+}
+
+header .menu-item {
+    position: static;
+}
 
 header .menu-item a {
-    color: white;
+    color: black;
+    padding: 10px;
 }
 
 header .menu-item:hover>a {
-    color: var(--yellow)
+    color: var(--yellow);
 }
 
-header .dropdown-menu:hover .dropdown-content {
+header .navbar .dropdown-menu:hover .dropdown-content,
+header .navbar .dropdown-content:is(.visible) {
     box-shadow: 0px 2px 12px rgb(26 27 134 / 10%);
     padding: 10px;
     display: grid;
-    grid-template-columns: repeat(2, auto);
+    grid-template-columns: repeat(3, auto);
     background-color: white;
+}
+
+header #main-menu .dropdown-menu-item {
+    width: 100%;
 }
 
 header .dropdown-content a {
@@ -40,30 +111,28 @@ header .dropdown-content a {
     margin: 10px 15px;
 }
 
+header .dropdown-menu-item a:hover {
+    background-color: var(--yellow);
+    color: white;
+}
+
 header .navbar {
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
     height: var(--height);
+    flex-wrap: nowrap;
+    position: relative;
 }
 
 header .nav-btn {
-    color: white;
+    color: black;
     display: flex;
     justify-content: center;
     align-items: center;
     height: var(--height);
     cursor: pointer;
-}
-
-header .language-setting {
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-header .language-setting img {
-    height: 20px;
+    width: var(--height);
+    float: right;
 }
 
 header .login {
@@ -83,6 +152,9 @@ header .slogan {
     justify-content: center;
     flex-wrap: nowrap;
     height: var(--logo-size);
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-user-drag: none;
 }
 
 header .logo>div {
@@ -110,6 +182,37 @@ header .slogan span {
     font-weight: 700;
     color: var(--green);
     text-align: center;
+}
+
+header .search-bar {
+    --size: 35px;
+    right: 0px;
+    left: unset !important;
+}
+
+header .search-bar .dropdown-menu-item>div {
+    display: flex;
+    width: max-content;
+    height: var(--size);
+    border: 1px solid var(--blue);
+}
+
+header .search-bar .dropdown-content>div * {
+    height: 100%;
+}
+
+header .search-bar :is(button, input) {
+    outline: none;
+    border: none;
+    padding: 5px;
+}
+
+header .search-bar button {
+    cursor: pointer;
+    border-left: 1px solid var(--blue);
+    background-color: var(--blue);
+    color: white;
+    margin-right: -1px;
 }
 
 @media (max-width: 1199px) {

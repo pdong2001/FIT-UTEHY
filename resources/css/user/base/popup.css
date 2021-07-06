@@ -1,0 +1,29 @@
+.social {
+    --size: 50px;
+    position: fixed;
+    top: 50%;
+    right: 0px;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+
+.social a {
+    width: var(--size);
+    height: var(--size);
+    display: block;
+    overflow: hidden;
+    margin: 10px;
+    padding: 5px;
+    border-radius: 50%;
+    border: 3px solid var(--blue);
+}
+
+.social img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.social .scale {
+    transform: scale(1.3);
+}

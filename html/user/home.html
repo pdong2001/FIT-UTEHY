@@ -16,23 +16,70 @@
     <link rel="stylesheet" href="../../resources/css/user/base/header.css" type="text/css">
     <link rel="stylesheet" href="../../resources/css/user/base/footer.css" type="text/css">
     <link rel="stylesheet" href="../../resources/css/user/home/style.css" type="text/css">
-
+    <link rel="stylesheet" href="../../resources/css/user/base/popup.css" type="text/css">
 
     <script src="../../vendors/js/jquery-3.6.0.js"></script>
     <script src="../../vendors/fontawesome/js/all.js"></script>
     <script src="../../vendors/slick/slick.js"></script>
 
-    <script src="../../resources/js/home/slider.js"></script>
+    <script src="../../resources/js/base/slider.js"></script>
+    <script src="../../resources/js/base/nav.js"></script>
 
     <title>Trang chủ | Khoa công nghệ thông tin</title>
 </head>
 
 <body class="scroll-hidden">
     <header>
-        <div class="menubar">
+        <div class="headbar">
             <div class="grid wide">
-                <div class="row flex spbt " id="main-menu">
-                    <div class="col c-0 m-12 l-6">
+                <div class="row">
+                    <div class="col c-12 m-6 l-6 left">
+                        <span>Thứ 2 ngày 05/7/2021</span>
+                    </div>
+                    <div class="col c-12 m-6 l-6 right">
+                        <div class="social-icons">
+                            <a href=""><i class="fab fa-facebook-f"></i></a>
+                            <a href=""><i class="fab fa-youtube"></i></i></a>
+                        </div>
+                        <div class="language-setting">
+                            <input type="radio" id="vni" name="language-setting" checked>
+                            <label for="vni" name="language-setting">
+                                <img src="../../resources/img/VN_Flag.png" alt="VN-VNI">
+                            </label>
+                            <input type="radio" id="en" name="language-setting">
+                            <label for="en" name="language-setting">
+                                 <img src="../../resources/img/EN_Flag.png" alt="US/EN">
+                             </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="logo-bar">
+            <div class="grid wide">
+                <div class="row">
+                    <div class="col c-12 m-12 l-6">
+                        <div class="logo">
+                            <img src="../../resources/img/Logo.png" alt="logo" />
+                            <div>
+                                <h1>TRƯỜNG ĐẠI HỌC SƯ PHẠM KỸ THUẬT HƯNG YÊN</h1>
+                                <span>KHOA CÔNG NGHỆ THÔNG TIN</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col c-12 m-12 l-6">
+                        <div class="slogan">
+                            <span><span class="nowrap">“CHUẨN MỰC</span> - <span class="nowrap">SÁNG TẠO</span> <span class="nowrap">- TIÊN PHONG”</span></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="menubar" id="main-menu">
+            <input class="nav-check" type="checkbox" id="main-nav">
+            <div class="grid wide">
+                <div class="row">
+                    <div class="col c-0 m-0 l-12">
                         <ul class="navbar">
                             <li class="menu-item dropdown-menu">
                                 <a href="" class="dropdown-btn">Giới thiệu</a>
@@ -58,11 +105,6 @@
                                     <li class="dropdown-menu-item">
                                         <a href="">Cơ sở vật chất</a>
                                     </li>
-                                </ul>
-                            </li>
-                            <li class="menu-item dropdown-menu">
-                                <a href="" class="dropdown-btn">Bộ môn trung tâm</a>
-                                <ul class="dropdown-content">
                                     <li class="dropdown-menu-item">
                                         <a href="">BM Mạng máy tính & Truyền thông</a>
                                     </li>
@@ -131,21 +173,6 @@
                                     </li>
                                 </ul>
                             </li>
-                        </ul>
-                    </div>
-                    <div class="col c-0 m-12 l-6">
-                        <ul class="navbar">
-                            <li class="menu-item dropdown-menu">
-                                <a href="" class="dropdown-btn">Sinh viên</a>
-                                <ul class="dropdown-content">
-                                    <li class="dropdown-menu-item">
-                                        <a href="">Các mẫu biểu - văn bản</a>
-                                    </li>
-                                    <li class="dropdown-menu-item">
-                                        <a href="">Thông báo</a>
-                                    </li>
-                                </ul>
-                            </li>
                             <li class="menu-item dropdown-menu">
                                 <a href="" class="dropdown-btn">Tin tức - Sự kiện</a>
                                 <ul class="dropdown-content">
@@ -158,101 +185,206 @@
                                     <li class="dropdown-menu-item">
                                         <a href="">Sự kiện</a>
                                     </li>
+                                    <li class="dropdown-menu-item">
+                                        <a href="">Tuyển dụng</a>
+                                    </li>
+                                    <li class="dropdown-menu-item">
+                                        <a href="">Các mẫu biểu - văn bản</a>
+                                    </li>
+                                    <li class="dropdown-menu-item">
+                                        <a href="">Thông báo</a>
+                                    </li>
                                 </ul>
                             </li>
                             <li class="menu-item dropdown-menu">
-                                <a href="">Tuyển dụng</a>
-                            </li>
-                            <li class="menu-item dropdown-menu">
-                                <a href="">Liên hệ</a>
-                            </li>
-                            <li class="flex center middle">
-                                <div class="menu-item">
-                                    <a href="" class="language-setting">
-                                        <img src="../../resources/img/EN_Flag.png" alt="flag">
-                                    </a>
-                                </div>
-                                <div class="menu-item">
-                                    <a class="login" href="function:void(0)" id="logout"><i class="fas fa-sign-in-alt"></i></a>
-                                </div>
+                                <label for="search-input">
+                                    <i class="fas fa-search"></i>
+                                </label>
+                                <ul class="dropdown-content search-bar col m-0 c-0">
+                                    <li class="dropdown-menu-item">
+                                        <div>
+                                            <input type="text" name="search" id="search-input" placeholder="Tìm kiếm...">
+                                            <button>Tìm kiếm</button>
+                                        </div>
+                                    </li>
+                                </ul>
                             </li>
                         </ul>
                     </div>
-                    <div class="col c-2 c-o-10 l-0 m-0">
-                        <div class="nav-btn">
+                    <div class="col c-2 c-o-10 l-0 m-2">
+                        <label class="nav-btn" for="main-nav">
                             <i class="fas fa-bars"></i>
-                        </div>
+                        </label>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="logo-bar">
-            <div class="grid wide">
-                <div class="row">
-                    <div class="col c-12 m-12 l-6">
-                        <div class="logo">
-                            <img src="../../resources/img/Logo.png" alt="logo" />
-                            <div>
-                                <h1>TRƯỜNG ĐẠI HỌC SƯ PHẠM KỸ THUẬT HƯNG YÊN</h1>
-                                <span>KHOA CÔNG NGHỆ THÔNG TIN</span>
-                            </div>
+            <div class="nav">
+                <ul class=" scroll-hidden">
+                    <li class="menu-item">
+                        <label for="main-nav" class="close">
+                        <i class="fas fa-times"></i>
+                    </label>
+                    </li>
+                    <li class="menu-item dropdown-menu">
+                        <div class="root">
+                            <a href="" class="dropdown-btn">Giới thiệu</a>
+                            <button><i class="fas fa-chevron-down"></i></button>
                         </div>
-                    </div>
-                    <div class="col c-12 m-12 l-6">
-                        <div class="slogan">
-                            <span><span class="nobr">“CHUẨN MỰC</span> - <span class="nobr">SÁNG TẠO</span> <span class="nobr">- TIÊN PHONG”</span></span>
+                        <ul class="dropdown-content">
+                            <li class="dropdown-menu-item">
+                                <a href="">Lịch sử phát triển</a>
+                            </li>
+                            <li class="dropdown-menu-item">
+                                <a href="">Sứ mệnh tầm nhìn</a>
+                            </li>
+                            <li class="dropdown-menu-item">
+                                <a href="">Chiến lược phát triển</a>
+                            </li>
+                            <li class="dropdown-menu-item">
+                                <a href="">Cơ cấu tổ chức</a>
+                            </li>
+                            <li class="dropdown-menu-item">
+                                <a href="">Ban lãnh đạo khoa</a>
+                            </li>
+                            <li class="dropdown-menu-item">
+                                <a href="">Đội ngũ cán bộ</a>
+                            </li>
+                            <li class="dropdown-menu-item">
+                                <a href="">Cơ sở vật chất</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="menu-item dropdown-menu">
+                        <div class="root">
+                            <a href="" class="dropdown-btn">Bộ môn trung tâm</a>
+                            <button><i class="fas fa-chevron-down"></i></button>
                         </div>
-                    </div>
-                </div>
+                        <ul class="dropdown-content">
+                            <li class="dropdown-menu-item">
+                                <a href="">BM Mạng máy tính & Truyền thông</a>
+                            </li>
+                            <li class="dropdown-menu-item">
+                                <a href="">BM Công nghệ phần mềm</a>
+                            </li>
+                            <li class="dropdown-menu-item">
+                                <a href="">BM Kỹ thuật máy tính</a>
+                            </li>
+                            <li class="dropdown-menu-item">
+                                <a href="">Trung tâm Hưng Yên Aptech</a>
+                            </li>
+                            <li class="dropdown-menu-item">
+                                <a href="">Trung tâm Trí tuệ nhân tạo</a>
+                            </li>
+                            <li class="dropdown-menu-item">
+                                <a href="">Trung tâm Phát triển phần mềm</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="menu-item dropdown-menu">
+                        <div class="root">
+                            <a href="" class="dropdown-btn">Đào tạo</a>
+                            <button><i class="fas fa-chevron-down"></i></button>
+                        </div>
+                        <ul class="dropdown-content">
+                            <li class="dropdown-menu-item">
+                                <a href="">Sau Đại học</a>
+                            </li>
+                            <li class="dropdown-menu-item">
+                                <a href="">Đại học chính quy</a>
+                            </li>
+                            <li class="dropdown-menu-item">
+                                <a href="">Đại học liên thông</a>
+                            </li>
+                            <li class="dropdown-menu-item">
+                                <a href="">Bồi dưỡng ngắn hạn</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="menu-item dropdown-menu">
+                        <div class="root">
+                            <a href="" class="dropdown-btn">Nghiên cứu</a>
+                            <button><i class="fas fa-chevron-down"></i></button>
+                        </div>
+                        <ul class="dropdown-content">
+                            <li class="dropdown-menu-item">
+                                <a href="">Định hướng nghiên cứu</a>
+                            </li>
+                            <li class="dropdown-menu-item">
+                                <a href="">Các phòng thí nghiệm</a>
+                            </li>
+                            <li class="dropdown-menu-item">
+                                <a href="">Công bố khóa học</a>
+                            </li>
+                            <li class="dropdown-menu-item">
+                                <a href="">Các đề tài nghiên cứu</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="menu-item dropdown-menu">
+                        <div class="root">
+                            <a href="" class="dropdown-btn">Tuyển sinh</a>
+                            <button><i class="fas fa-chevron-down"></i></button>
+                        </div>
+                        <ul class="dropdown-content">
+                            <li class="dropdown-menu-item">
+                                <a href="">Tuyển sinh</a>
+                            </li>
+                            <li class="dropdown-menu-item">
+                                <a href="">Tuyển sinh 2021</a>
+                            </li>
+                            <li class="dropdown-menu-item">
+                                <a href="">Hỏi đáp tuyển sinh</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="menu-item dropdown-menu">
+                        <div class="root">
+                            <a href="" class="dropdown-btn">Tin tức - Sự kiện</a>
+                            <button><i class="fas fa-chevron-down"></i></button>
+                        </div>
+                        <ul class="dropdown-content">
+                            <li class="dropdown-menu-item">
+                                <a href="">Tin bài</a>
+                            </li>
+                            <li class="dropdown-menu-item">
+                                <a href="">Tin tức</a>
+                            </li>
+                            <li class="dropdown-menu-item">
+                                <a href="">Sự kiện</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="menu-item">
+                        <a href="">Tuyển dụng</a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="">Liên hệ</a>
+                    </li>
+                </ul>
+                <label class="cover-layer" for="main-nav">
+
+            </label>
             </div>
         </div>
     </header>
-    <div id="scroll-menu">
-        <div class="grid wide">
-            <div class="row">
-                <div class="col c-0 m-12 l-12">
-                    <div class="scroll-menu">
-                        <ul class="navbar">
-                            <li class="menu-item">
-                                <a href="#events">Tin nổi bật</a>
-                            </li>
-                            <li class="menu-item">
-                                <a href="#notice">Thông báo</a>
-                            </li>
-                            <li class="menu-item">
-                                <a href="#">Dành cho Cán bộ/Giảng viên</a>
-                            </li>
-                            <li class="menu-item">
-                                <a href="#">Dành cho sinh viên</a>
-                            </li>
-                            <li class="menu-item">
-                                <a href="#">Học tập và nghiên cứu</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+
     <!-- Main slider -->
     <section class="lazy slider">
         <div>
-            <img src="../../resources/img/1200x360.png" data-sizes="100%">
+            <a href="">
+                <img src="../../resources/img/Artboard-1_2.jpg" data-sizes="100%">
+            </a>
         </div>
         <div>
-            <img src="../../resources/img/1200x360.png" data-sizes="100%">
+            <a href="">
+                <img src="../../resources/img/Artboard-2_2.jpg" data-sizes="100%">
+            </a>
         </div>
         <div>
-            <img src="../../resources/img/1200x360.png" data-sizes="100%">
-        </div>
-        <div>
-            <img src="../../resources/img/1200x360.png" data-sizes="100%">
-        </div>
-        <div>
-            <img src="../../resources/img/1200x360.png" data-sizes="100%">
-        </div>
-        <div>
-            <img src="../../resources/img/1200x360.png" data-sizes="100%">
+            <a href="">
+                <img src="../../resources/img/Artboard-3_2.jpg" data-sizes="100%">
+            </a>
         </div>
     </section>
     <!-- End main slider -->
@@ -377,7 +509,7 @@
                 <div class="title col c-12">
                     <h2><i class="fas fa-fire"></i> Sự kiện nổi bật</h2>
                 </div>
-                <div class="news col c-12 m-7 l-7">
+                <div class="news col c-12 m-5 l-5">
                     <div class="fill-img cover img">
                         <a href="">
                             <img src="../../resources/img/events-1.jpg" alt="sự kiện">
@@ -397,7 +529,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col c-12 m-5 l-5 small row">
+                <div class="col c-12 m-4 l-4 small row">
                     <div class="news col c-3 m-12 l-12">
                         <a href="" class="fill-img cover img c-12 m-3 l-3">
                             <img src="../../resources/img/events-2.jpg" alt="sự kiện">
@@ -477,10 +609,42 @@
                         </div>
                     </div>
                 </div>
+                <div class="col c-0 m-3 l-3 row">
+                    <div class="col c-12 title small">
+                        <h2>Lịch sự kiện</h2>
+                    </div>
+                    <div class="content">
+                        <a href="">
+                            <img src="../../resources/img/anhtuyensinh1.png" alt="">
+                        </a>
+                    </div>
+                    <div class="content">
+                        <a href="">
+                            <img src="../../resources/img/viettel1.jpg" alt="">
+                        </a>
+                    </div>
+                    <div class="content">
+                        <a href="">
+                            <img src="../../resources/img/unnamed-1-300x163.jpg" alt="">
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
     <!-- End news -->
+
+    <!-- Banner -->
+    <section>
+        <div class="banner">
+            <div class="content-row fill">
+                <a href="">
+                    <img src="../../resources/img/Artboard-2_2.jpg" alt="">
+                </a>
+            </div>
+        </div>
+    </section>
+    <!-- End banner -->
 
     <!-- Notice -->
     <section>
@@ -566,6 +730,7 @@
     </section>
     <!-- End notice -->
 
+
     <!-- For staff -->
     <section>
         <div class="content-row grid wide" id="forstaff">
@@ -587,6 +752,29 @@
         </div>
     </section>
     <!-- End for staff -->
+
+    <!-- Popup -->
+
+    <!-- Social -->
+    <section>
+        <div class="social">
+            <div class="btn">
+                <a href=""><img src="../../resources/img/logo-zalo.png" alt="Zalo" /></a>
+            </div>
+            <div class="btn">
+                <a href=""><img class="scale" src="../../resources/img/logo-youtube.png" alt="Zalo" /></a>
+            </div>
+            <div class="btn">
+                <a href=""><img class="scale" src="../../resources/img/icon-phone.png" alt="Zalo" /></a>
+            </div>
+            <div class="btn">
+                <a href=""><img src="../../resources/img/logo-facebook.png" alt="Zalo" /></a>
+            </div>
+        </div>
+    </section>
+    <!-- End social -->
+
+    <!-- End popup -->
 </body>
 
 </html>
