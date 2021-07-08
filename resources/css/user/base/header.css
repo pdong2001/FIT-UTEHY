@@ -10,7 +10,7 @@ header #main-menu {
 }
 
 header .headbar {
-    --height: 50px;
+    --height: 35px;
     height: auto;
     min-height: var(--height);
     background-color: var(--green);
@@ -68,7 +68,7 @@ header .language-setting label:not(:first-child) {
 }
 
 header .menubar {
-    --height: 50px;
+    --height: 35px;
     height: auto;
     min-height: var(--height);
     display: flex;
@@ -87,6 +87,7 @@ header .menu-item a,
 header .menu-item>*:first-of-type {
     color: black;
     padding: 10px;
+    margin: 0px 15px;
     display: flex;
     align-items: center;
 }
