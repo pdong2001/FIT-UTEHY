@@ -22,7 +22,11 @@ html {
     display: flex;
 }
 
-.flex.center {
+.flex.ai-center {
+    align-items: center;
+}
+
+.flex.jc-center {
     justify-content: center;
 }
 

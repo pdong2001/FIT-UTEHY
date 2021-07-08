@@ -4,7 +4,7 @@ header {
 }
 
 header #main-menu {
-    z-index: 1;
+    z-index: 2;
     position: relative;
     height: auto;
 }
@@ -72,7 +72,6 @@ header .menubar {
     height: auto;
     min-height: var(--height);
     display: flex;
-    z-index: 1;
 }
 
 header .menubar .grid {
@@ -80,12 +79,36 @@ header .menubar .grid {
 }
 
 header .menu-item {
+    --size: 35px;
     position: static;
 }
 
-header .menu-item a {
+header .menu-item a,
+header .menu-item>*:first-of-type {
     color: black;
     padding: 10px;
+    display: flex;
+    align-items: center;
+}
+
+header .menu-item a iframe {
+    border: none;
+    height: 100%;
+    display: block;
+}
+
+header .menu-item a iframe svg {
+    height: var(--size);
+    width: var(--size);
+}
+
+header .menu-item a img {
+    height: var(--size);
+    width: var(--size);
+    margin-right: 10px;
+    fill: black;
+    border: none;
+    overflow: hidden;
 }
 
 header .menu-item:hover>a {
@@ -99,21 +122,54 @@ header .navbar .dropdown-content:is(.visible) {
     display: grid;
     grid-template-columns: repeat(3, auto);
     background-color: white;
+    width: 100%;
+    grid-gap: 10px;
 }
 
 header #main-menu .dropdown-menu-item {
     width: 100%;
+    display: flex;
+    align-items: center;
 }
 
 header .dropdown-content a {
     color: black;
     font-size: var(--fs-medium);
-    margin: 10px 15px;
+    width: 100%;
+    height: var(--size);
+    box-sizing: content-box;
 }
 
 header .dropdown-menu-item a:hover {
     background-color: var(--yellow);
     color: white;
+}
+
+header .educate .dropdown-menu-item a {
+    flex-direction: column;
+    height: auto;
+}
+
+header .educate .dropdown-menu-item a img {
+    width: 15%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+header :is(.research, .admissions, .events) {
+    display: flex !important;
+    align-items: flex-start;
+}
+
+header :is(.research, .admissions, .events)>div:first-child {
+    width: 40%;
+    height: 200px;
+}
+
+header :is(.research, .admissions, .events)>div:last-child {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    width: 60%;
 }
 
 header .navbar {
@@ -161,6 +217,30 @@ header .logo>div {
     margin-left: 15px;
 }
 
+header .menubar .logo {
+    width: auto;
+    height: var(--height);
+}
+
+header .menubar .logo img {
+    height: var(--height);
+    width: var(--height);
+    display: none;
+}
+
+header .menubar.fixed {
+    position: fixed !important;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    background-color: white;
+    z-index: 1;
+}
+
+header .menubar.fixed .logo img {
+    display: block;
+}
+
 header .logo img {
     height: var(--logo-size);
     width: var(--logo-size);
@@ -185,38 +265,63 @@ header .slogan span {
 }
 
 header .search-bar {
-    --size: 35px;
-    right: 0px;
-    left: unset !important;
+    display: block !important;
 }
 
-header .search-bar .dropdown-menu-item>div {
+header .search-bar form {
+    width: 100%;
+    margin: 10px 10%;
+}
+
+header .search-bar form label {
+    --size: 150px;
+    min-width: max-content;
+    width: var(--size);
+}
+
+header .search-bar form>div {
+    margin: 10px 0px;
+}
+
+header .search-bar form div {
     display: flex;
-    width: max-content;
-    height: var(--size);
-    border: 1px solid var(--blue);
+    align-items: center;
+    overflow: visible;
 }
 
-header .search-bar .dropdown-content>div * {
-    height: 100%;
+header .search-bar .title-only {
+    margin-left: 20px;
 }
 
-header .search-bar :is(button, input) {
-    outline: none;
+header .search-bar .title-only input[type="checkbox"] {
+    margin: 5px;
+}
+
+header .search-bar form input[type="text"] {
+    width: 320px;
+}
+
+header .search-bar :is(input, select) {
     border: none;
-    padding: 5px;
+    border-bottom: 1px solid var(--blue);
+    padding: 2px 5px;
+    outline: none;
+}
+
+header .search-bar .time span {
+    margin: 5px;
 }
 
 header .search-bar button {
-    cursor: pointer;
-    border-left: 1px solid var(--blue);
-    background-color: var(--blue);
+    border: none;
+    outline: none;
+    background: var(--blue);
     color: white;
-    margin-right: -1px;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
-@media (max-width: 1199px) {
-    header .dropdown-menu:hover {
-        position: static;
-    }
+header .search-bar button:hover {
+    opacity: 0.8;
 }

@@ -43,4 +43,21 @@ $(document).ready(function() {
             }
         ]
     });
+    $(".content-menu.slider").slick({
+        dots: false,
+        infinite: true,
+        slidesToShow: 5,
+        slidesToScroll: 3,
+        arrows: false,
+        autoplay: true,
+        pauseOnFocus: true,
+        autoplaySpeed: 5000,
+        responsive: [{
+            breakpoint: 1024,
+            settings: {
+                slidesToShow: 4,
+                slidesToScroll: 1,
+            }
+        }]
+    });
 });
