@@ -1,77 +1,21 @@
+@import './header/headbar.css';
 header {
     width: 100%;
     background-color: white;
 }
 
-header #main-menu {
+header .menubar,
+header .menubar .temp {
     z-index: 2;
     position: relative;
     height: auto;
-}
-
-header .headbar {
-    --height: 35px;
-    height: auto;
-    min-height: var(--height);
-    background-color: var(--green);
-    color: white;
-    cursor: default;
-}
-
-header .headbar :is(.right, .left) {
-    display: flex;
-    align-items: center;
-    height: var(--height);
-}
-
-header .headbar .right {
-    justify-content: flex-end;
-}
-
-header .social-icons a {
-    color: white;
-    margin: 0px 5px;
-    padding: 5px;
-    font-size: var(--fs-medium);
-}
-
-header .language-setting {
-    --size: 40px;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-header .language-setting label {
-    cursor: pointer;
-}
-
-header .language-setting input {
-    display: none;
-}
-
-header .language-setting input:checked+label img {
-    opacity: 1;
-    transform: scale(1.2);
-}
-
-header .language-setting img {
-    box-sizing: content-box;
-    height: calc(var(--size) / 1.7);
-    width: var(--size);
-    opacity: 0.7;
-}
-
-header .language-setting label:not(:first-child) {
-    margin-left: 10px;
-}
-
-header .menubar {
-    --height: 35px;
+    --height: 50px;
+    --items-height: 25px;
     height: auto;
     min-height: var(--height);
     display: flex;
+    box-shadow: 0px 2px 12px rgb(26 27 134 / 10%);
+    width: 100%;
 }
 
 header .menubar .grid {
@@ -79,12 +23,12 @@ header .menubar .grid {
 }
 
 header .menu-item {
-    --size: 35px;
     position: static;
+    font-size: var(--fs-medium);
 }
 
 header .menu-item a,
-header .menu-item>*:first-of-type {
+header .menu-item>*:not(:is(div, ul)):first-child {
     color: black;
     padding: 10px;
     margin: 0px 15px;
@@ -92,20 +36,9 @@ header .menu-item>*:first-of-type {
     align-items: center;
 }
 
-header .menu-item a iframe {
-    border: none;
-    height: 100%;
-    display: block;
-}
-
-header .menu-item a iframe svg {
-    height: var(--size);
-    width: var(--size);
-}
-
 header .menu-item a img {
-    height: var(--size);
-    width: var(--size);
+    height: var(--items-height);
+    width: var(--items-height);
     margin-right: 10px;
     fill: black;
     border: none;
@@ -127,7 +60,7 @@ header .navbar .dropdown-content:is(.visible) {
     grid-gap: 10px;
 }
 
-header #main-menu .dropdown-menu-item {
+header .menubar .dropdown-menu-item {
     width: 100%;
     display: flex;
     align-items: center;
@@ -137,8 +70,16 @@ header .dropdown-content a {
     color: black;
     font-size: var(--fs-medium);
     width: 100%;
-    height: var(--size);
+    height: var(--items-height);
     box-sizing: content-box;
+}
+
+header .nav .root {
+    font-weight: 700;
+}
+
+header .nav .dropdown-content {
+    padding-left: 10px;
 }
 
 header .dropdown-menu-item a:hover {
@@ -159,12 +100,13 @@ header .educate .dropdown-menu-item a img {
 
 header :is(.research, .admissions, .events) {
     display: flex !important;
-    align-items: flex-start;
+    align-items: flex-start !important;
 }
 
 header :is(.research, .admissions, .events)>div:first-child {
     width: 40%;
     height: 200px;
+    box-shadow: 0px 2px 12px 5px rgb(26 27 134 / 10%);
 }
 
 header :is(.research, .admissions, .events)>div:last-child {
@@ -201,8 +143,8 @@ header .logo-bar {
     margin: 20px 0px;
 }
 
-header .logo,
-header .slogan {
+.logo,
+.slogan {
     --logo-size: 100px;
     display: flex;
     align-items: center;
@@ -229,9 +171,9 @@ header .menubar .logo img {
     display: none;
 }
 
-header .menubar.fixed {
+header .menubar .temp.fixed {
     position: fixed !important;
-    top: 0px;
+    top: 35px;
     left: 0px;
     width: 100%;
     background-color: white;
@@ -325,4 +267,22 @@ header .search-bar button {
 
 header .search-bar button:hover {
     opacity: 0.8;
+}
+
+@keyframes moveDown {
+    0% {
+        transform: translateY(100%);
+    }
+    20% {
+        transform: translateY(80%);
+    }
+    40% {
+        transform: translateY(60%);
+    }
+    60% {
+        transform: translateY(40%);
+    }
+    100% {
+        transform: translateY(0%);
+    }
 }

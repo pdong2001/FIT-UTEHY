@@ -96,8 +96,10 @@
     justify-content: center;
     align-items: center;
     height: var(--size);
+    font-size: calc(var(--size) / 2 - 2px);
     margin: 2px;
     background-color: rgba(0, 0, 0, 0.5);
+    text-align: center;
 }
 
 .content-menu-item a {
@@ -111,7 +113,6 @@
 
 .content-menu-item:is(:hover, .active) {
     background-color: var(--red);
-    /* transform: translateY(5px); */
 }
 
 .course {
@@ -244,6 +245,11 @@
     opacity: 0.7;
 }
 
+.schedule-img :is(a, img) {
+    width: 100%;
+    height: 100%;
+}
+
 .schedule {
     --size: 75px;
     --padding: 10px;
@@ -252,6 +258,7 @@
     border-bottom: 3px solid whitesmoke;
     margin-bottom: 10px;
     position: relative;
+    width: 100%;
 }
 
 .schedule a {
@@ -259,6 +266,7 @@
     top: 0px;
     left: 0px;
     width: 100%;
+    height: 100%;
     height: calc(100% - var(--padding));
     display: block;
 }
@@ -298,11 +306,6 @@
     color: var(--orange);
 }
 
-.content * {
-    width: 100%;
-    height: 100%;
-}
-
 .notice {
     --size: 100px;
     --date-ratio: 0.7;
@@ -337,12 +340,18 @@
     flex-direction: column;
     justify-content: space-between;
     padding: calc(var(--size) * 0.1) calc(var(--size) * (var(--date-ratio) - 0.2));
+    padding-right: 0px;
     margin-left: calc(var(--size) * var(--date-ratio) * 0.5);
 }
 
 .notice .content p {
+    text-overflow: ellipsis;
     text-transform: uppercase;
     font-weight: 700;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
 }
 
 .notice .content span {
@@ -385,6 +394,15 @@
 }
 
 .activity .right {}
+
+@media (max-width: 983px) {
+    .activity {
+        flex-direction: column-reverse;
+    }
+    .activity :is(.right, .left) {
+        width: 100%;
+    }
+}
 
 @media (max-width: 740px) {
      :root {

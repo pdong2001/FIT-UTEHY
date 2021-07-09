@@ -107,6 +107,8 @@ html {
     -moz-transition: max-height 0.8s;
     transition: max-height 0.8s;
     transform: translateY(0%);
+    overflow: hidden;
+    flex-direction: column;
 }
 
 .nav .dropdown-content.visible {
@@ -126,8 +128,9 @@ html {
     outline: none;
     border: none;
     background: none;
-    padding: 10px;
+    padding: 10px 15px;
     cursor: pointer;
+    font-size: inherit;
 }
 
 .nav>ul {
@@ -203,6 +206,8 @@ a {
     outline: none;
     text-decoration: none;
     display: inline-block;
+    font-size: inherit;
+    color: inherit;
 }
 
 img {
