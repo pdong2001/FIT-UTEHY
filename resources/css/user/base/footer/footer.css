@@ -2,6 +2,7 @@ footer {
     --color: #ffffff;
     background-color: var(--blue);
     padding: 10px;
+    bottom: 0px;
 }
 
 footer * {
@@ -74,11 +75,17 @@ footer .get-info input::placeholder {
 }
 
 footer .get-info button {
-    color: var(--color);
+    color: var(--blue);
+    background-color: var(--color);
     padding: 10px 15px;
     font-weight: 700;
-    background: var(--blue);
     border: 1px solid var(--color);
+    cursor: pointer;
+}
+
+footer .get-info button:hover {
+    color: var(--color);
+    background: var(--blue);
 }
 
 footer .infomation span {

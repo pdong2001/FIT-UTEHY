@@ -1,0 +1,35 @@
+#scroll-menu .scroll-menu {
+    border-top: 3px solid var(--yellow);
+}
+
+#scroll-menu .scroll-menu .menu-item a {
+    color: var(--black);
+    padding: 10px;
+    font-size: var(--fs-medium-l);
+}
+
+#scroll-menu .scroll-menu .menu-item:hover a {
+    color: var(--red);
+}
+
+#scroll-menu .scroll-menu .navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#scroll-menu {
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0px;
+    z-index: 1;
+    background-color: white;
+}
+
+.scroll-to.fixed {
+    position: fixed !important;
+    top: 35px;
+    left: 0px;
+    z-index: 1;
+    width: 100%;
+}
