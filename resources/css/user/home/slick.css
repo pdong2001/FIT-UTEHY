@@ -53,3 +53,55 @@
 .slick-slide {
     opacity: 1;
 }
+
+.content-menu {
+    background-color: white;
+}
+
+.content-menu-item {
+    --size: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: var(--size);
+    font-size: calc(var(--size) / 2 - 2px);
+    margin: 2px;
+    background-color: rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+.content-menu-item a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    color: white;
+}
+
+.content-menu-item:is(:hover, .active) {
+    background-color: var(--red);
+}
+
+.course {
+    height: 200px;
+    text-align: center;
+}
+
+.course img {
+    margin: 0px auto;
+}
+
+.course .name {
+    text-transform: uppercase;
+    font-size: var(--fs-medium-l);
+    font-weight: 700;
+    color: var(--blue);
+    margin: 10px auto;
+    display: block;
+    text-decoration: none;
+}
+
+.course .description {
+    font-size: var(--fs-small-m);
+}

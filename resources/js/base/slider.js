@@ -57,6 +57,16 @@ $(document).ready(function() {
             settings: {
                 slidesToShow: 4,
                 slidesToScroll: 1,
+            },
+            breakpoint: 800,
+            settings: {
+                slidesToShow: 3,
+                slidesToScroll: 1,
+            },
+            breakpoint: 400,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1,
             }
         }]
     });

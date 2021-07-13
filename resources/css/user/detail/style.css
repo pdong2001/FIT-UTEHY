@@ -1,0 +1,40 @@
+.content {
+    border: 1px solid #ddd;
+}
+
+.content>div {
+    margin: 10px;
+}
+
+.content .title {
+    display: flex;
+    justify-content: center;
+}
+
+.content .end {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.tags {
+    margin: 25px 0;
+}
+
+.tags h4 {
+    margin-bottom: 8px;
+}
+
+.tag-list {
+    list-style: none;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.tag-item {
+    margin-bottom: 8px;
+    padding: 5px 8px;
+    background-color: #E5E5E5;
+    margin-right: 8px;
+    font-size: var(--fs-small-m);
+}

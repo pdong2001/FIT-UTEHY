@@ -19,7 +19,19 @@ footer .title h2 {
     font-size: var(--fs-medium-l);
 }
 
-footer .news {
+.news.horizontal.scope {
+    --size: 150px;
+}
+
+.news.horizontal.scope .name a {
+    font-size: inherit !important;
+}
+
+.news .content {
+    font-size: smaller;
+}
+
+.news.horizontal {
     --size: 100px;
     display: flex;
     justify-content: center;
@@ -27,23 +39,23 @@ footer .news {
     margin: 10px 0px;
 }
 
-footer .news :is(.img img, .img a, .img) {
+.news.horizontal :is(.img img, .img a, .img) {
     height: var(--size);
     width: var(--size);
     min-height: var(--size);
     object-fit: cover;
 }
 
-footer .news .info {
+.news.horizontal .info {
     width: calc(100% - var(--size));
     padding-left: 10px;
 }
 
-footer .news .info .name {
+.news.horizontal .info .name {
     margin: 0px;
 }
 
-footer .news .info .name a {
+.news.horizontal .info .name a {
     font-size: smaller;
     color: var(--color);
     display: -webkit-box;
