@@ -1,0 +1,69 @@
+#scroll-menu .scroll-menu {
+    border-top: 3px solid var(--yellow);
+}
+
+#scroll-menu .scroll-menu .menu-item a {
+    color: var(--black);
+    padding: 10px;
+    font-size: var(--fs-medium-l);
+}
+
+#scroll-menu .scroll-menu .menu-item:hover a {
+    color: var(--red);
+}
+
+#scroll-menu .scroll-menu .navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#scroll-menu {
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0px;
+    z-index: 1;
+    background-color: white;
+}
+
+.content-menu .slick-slide {
+    margin: 0px 5px;
+}
+
+.scroll-to.fixed {
+    position: fixed !important;
+    top: 35px;
+    left: 0px;
+    z-index: 1;
+    width: 100%;
+}
+
+.content-menu {
+    background-color: white;
+}
+
+.content-menu-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2px;
+    background-color: rgba(0, 0, 0, 0.5);
+    text-align: center;
+    margin: 0px 5px;
+}
+
+.content-menu-item a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+}
+
+.content-menu-item:is(:hover, .active) {
+    background-color: var(--red);
+}

@@ -6,8 +6,7 @@
 @import './schedule.css';
 @import './activity.css';
 .content-row {
-    padding-top: 0px;
-    margin-bottom: 30px;
+    margin-bottom: 30px !important;
 }
 
 .title {

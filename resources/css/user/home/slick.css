@@ -54,35 +54,6 @@
     opacity: 1;
 }
 
-.content-menu {
-    background-color: white;
-}
-
-.content-menu-item {
-    --size: 35px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: var(--size);
-    font-size: calc(var(--size) / 2 - 2px);
-    margin: 2px;
-    background-color: rgba(0, 0, 0, 0.5);
-    text-align: center;
-}
-
-.content-menu-item a {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    color: white;
-}
-
-.content-menu-item:is(:hover, .active) {
-    background-color: var(--red);
-}
-
 .course {
     height: 200px;
     text-align: center;

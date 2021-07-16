@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="../../resources/css/library/grid.css" type="text/css">
     <link rel="stylesheet" href="../../resources/css/base/variable.css" type="text/css">
     <link rel="stylesheet" href="../../resources/css/base/style.css" type="text/css">
+    <link rel="stylesheet" href="../../resources/css/user/base/styles.css">
     <link rel="stylesheet" href="../../resources/css/user/base/header/header.css" type="text/css">
     <link rel="stylesheet" href="../../resources/css/user/base/footer/footer.css" type="text/css">
     <link rel="stylesheet" href="../../resources/css/user/home/slick.css">
@@ -21,11 +22,13 @@
     <link rel="stylesheet" href="../../resources/css/user/base/popup.css" type="text/css">
     <link rel="stylesheet" href="../../font-awesome.css">
 
+
     <script src="../../vendors/js/jquery-3.6.0.js"></script>
     <script src="../../vendors/slick/slick.js"></script>
 
     <script src="../../resources/js/base/slider.js"></script>
     <script src="../../resources/js/base/nav.js"></script>
+    <script src="../../resources/js/home/content-menu.js"></script>
 
     <title>Trang chủ | Khoa công nghệ thông tin</title>
 </head>
@@ -446,31 +449,7 @@
         <!-- Scroll to -->
         <section class="scroll-to">
             <div class="grid wide content-menu slider">
-                <div>
-                    <div class="content-menu-item">
-                        <a href="#events">Sự kiện nổi bật</a>
-                    </div>
-                </div>
-                <div>
-                    <div class="content-menu-item">
-                        <a href="#notice">Sự kiện nổi bật</a>
-                    </div>
-                </div>
-                <div>
-                    <div class="content-menu-item">
-                        <a href="#activity">Các hình ảnh hoạt động</a>
-                    </div>
-                </div>
-                <div>
-                    <div class="content-menu-item">
-                        <a href="#product">Chuyển giao công nghệ</a>
-                    </div>
-                </div>
-                <div>
-                    <div class="content-menu-item">
-                        <a href="#">Sự kiện nổi bật</a>
-                    </div>
-                </div>
+
             </div>
         </section>
         <!-- End scroll to -->
@@ -588,7 +567,7 @@
         <!-- End content slider -->
 
         <!-- News -->
-        <section id="events">
+        <section id="events" class="row-ID">
             <div class="grid wide">
                 <div class="row content-row">
                     <div class="title col c-12">
@@ -608,40 +587,28 @@
                                 </a>
                                 </div>
                                 <div class="description">
-                                    <p class="time">
-                                        <i class="fa fa-calendar" aria-hidden="true"></i> 17/6/2021
-                                    </p>
+                                    <div>
+                                        <p class="time">
+                                            <i class="fa fa-calendar" aria-hidden="true"></i> 17/6/2021
+                                        </p>
+                                        <p class="view-count">
+                                            <i class="fa fa-eye" aria-hidden="true"></i>
+                                            <span>1</span> lượt xem
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                         <div class="col c-12 m-12 l-12 small">
                             <div class="row">
-                                <div class="news col c-6 m-3 l-3">
-                                    <div class="fill-img cover img">
-                                        <a href="">
-                                            <img src="../../resources/img/events-2.jpg" alt="sự kiện">
-                                        </a>
-                                    </div>
-                                    <div class="info">
-                                        <div class="name">
-                                            <a href="">
-                                            CÔNG BỐ QUYẾT ĐỊNH BỔ NHIỆM TRƯỞNG KHOA CÔNG NGHỆ THÔNG TIN		</a>
-                                        </div>
-                                        <div class="description">
-                                            <p class="time">
-                                                <i class="fa fa-calendar" aria-hidden="true"></i> 17/6/2021
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="news col c-6 m-3 l-3">
+                                <div class="news col c-6 m-4 l-4">
                                     <div class="fill-img cover img">
                                         <a href="">
                                             <img src="../../resources/img/events-3.jpg" alt="sự kiện">
                                         </a>
                                     </div>
                                     <div class="info">
-                                        <div class="name">
+                                        <div class="name pad-top">
                                             <a href="">
                                             TB điều chỉnh kế hoạch thi tuyển sinh cao học đợt 1 năm 2021		</a>
                                         </div>
@@ -649,17 +616,21 @@
                                             <p class="time">
                                                 <i class="fa fa-calendar" aria-hidden="true"></i> 17/6/2021
                                             </p>
+                                            <p class="view-count">
+                                                <i class="fa fa-eye" aria-hidden="true"></i>
+                                                <span>1</span> lượt xem
+                                            </p>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="news col c-6 m-3 l-3">
+                                <div class="news col c-6 m-4 l-4">
                                     <div class="fill-img cover img">
                                         <a href="">
                                             <img src="../../resources/img/events-4.png" alt="sự kiện">
                                         </a>
                                     </div>
                                     <div class="info">
-                                        <div class="name">
+                                        <div class="name pad-top">
                                             <a href="">
                                             Thông báo tuyển dụng Công ty cổ phần Đầu tư Công nghệ E-SPOT		
                                         </a>
@@ -668,23 +639,31 @@
                                             <p class="time">
                                                 <i class="fa fa-calendar" aria-hidden="true"></i> 17/6/2021
                                             </p>
+                                            <p class="view-count">
+                                                <i class="fa fa-eye" aria-hidden="true"></i>
+                                                <span>1</span> lượt xem
+                                            </p>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="news col c-6 m-3 l-3">
+                                <div class="news col c-0 m-4 l-4">
                                     <div class="fill-img cover img">
                                         <a href="">
                                             <img src="../../resources/img/events-5.jpg" alt="sự kiện">
                                         </a>
                                     </div>
                                     <div class="info">
-                                        <div class="name">
+                                        <div class="name pad-top">
                                             <a href="">
                                             Hội thảo khoa học cấp trường: Các mô hình học máy cho khai phá dữ liệu		</a>
                                         </div>
                                         <div class="description">
                                             <p class="time">
                                                 <i class="fa fa-calendar" aria-hidden="true"></i> 17/6/2021
+                                            </p>
+                                            <p class="view-count">
+                                                <i class="fa fa-eye" aria-hidden="true"></i>
+                                                <span>1</span> lượt xem
                                             </p>
                                         </div>
                                     </div>
@@ -770,68 +749,6 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- <div class="col c-12 title small">
-                        <h2>Lịch sự kiện</h2>
-                    </div>
-                    <div class="schedule">
-                        <div class="time">
-                            <span class="week">Tuần 44</span>
-                            <span class="date">20.5</span>
-                        </div>
-                        <div class="info">
-                            <p class="name">Lịch làm việc tuần 44</p>
-                            <p class="description">Từ: 01/6 - 07/6/2021</p>
-                        </div>
-                        <a href=""></a>
-                    </div>
-                    <div class="schedule">
-                        <div class="time">
-                            <span class="week">Tuần 44</span>
-                            <span class="date">20.5</span>
-                        </div>
-                        <div class="info">
-                            <p class="name">Lịch làm việc tuần 44</p>
-                            <p class="description">Từ: 01/6 - 07/6/2021</p>
-                        </div>
-                        <a href=""></a>
-                    </div>
-                    <div class="schedule">
-                        <div class="time">
-                            <span class="week">Tuần 44</span>
-                            <span class="date">20.5</span>
-                        </div>
-                        <div class="info">
-                            <p class="name">Lịch làm việc tuần 44</p>
-                            <p class="description">Từ: 01/6 - 07/6/2021</p>
-                        </div>
-                        <a href=""></a>
-                    </div>
-                    <div class="schedule">
-                        <div class="time">
-                            <span class="week">Tuần 44</span>
-                            <span class="date">20.5</span>
-                        </div>
-                        <div class="info">
-                            <p class="name">Lịch làm việc tuần 44</p>
-                            <p class="description">Từ: 01/6 - 07/6/2021</p>
-                        </div>
-                        <a href=""></a>
-                    </div>
-                    <div class="content">
-                        <a href="">
-                            <img src="../../resources/img/anhtuyensinh1.png" alt="">
-                        </a>
-                    </div>
-                    <div class="content">
-                        <a href="">
-                            <img src="../../resources/img/viettel1.jpg" alt="">
-                        </a>
-                    </div>
-                    <div class="content">
-                        <a href="">
-                            <img src="../../resources/img/unnamed-1-300x163.jpg" alt="">
-                        </a>
-                    </div> -->
                     </div>
                 </div>
             </div>
@@ -851,11 +768,11 @@
         <!-- End banner -->
 
         <!-- Notice -->
-        <section id="notice">
+        <section id="notice" class="row-ID">
             <div class="grid wide">
                 <div class="row">
                     <div class="col c-12 title">
-                        <h2>Lịch sự kiện</h2>
+                        <h2><i class="fa fa-graduation-cap" aria-hidden="true"></i> Tin mới</h2>
                     </div>
                     <div class="col c-12 m-12 l-8">
                         <div class="news horizontal scope">
@@ -871,12 +788,18 @@
                                         </a>
                                 </div>
                                 <div class="description">
-                                    <p class="time">
-                                        <i class="fa fa-calendar" aria-hidden="true"></i> 17/6/2021
-                                    </p>
                                     <p class="content">
                                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, cum! Suscipit ducimus corrupti libero, atque rerum maxime ea eaque, praesentium neque saepe voluptatibus, minus dolore harum quidem deserunt ut ipsum?
                                     </p>
+                                    <div>
+                                        <p class="time">
+                                            <i class="fa fa-calendar" aria-hidden="true"></i> 17/6/2021
+                                        </p>
+                                        <p class="view-count">
+                                            <i class="fa fa-eye" aria-hidden="true"></i>
+                                            <span>1</span> lượt xem
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -893,9 +816,15 @@
                                         </a>
                                 </div>
                                 <div class="description">
-                                    <p class="time">
-                                        <i class="fa fa-calendar" aria-hidden="true"></i> 17/6/2021
-                                    </p>
+                                    <div>
+                                        <p class="time">
+                                            <i class="fa fa-calendar" aria-hidden="true"></i> 17/6/2021
+                                        </p>
+                                        <p class="view-count">
+                                            <i class="fa fa-eye" aria-hidden="true"></i>
+                                            <span>1</span> lượt xem
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -912,9 +841,15 @@
                                         </a>
                                 </div>
                                 <div class="description">
-                                    <p class="time">
-                                        <i class="fa fa-calendar" aria-hidden="true"></i> 17/6/2021
-                                    </p>
+                                    <div>
+                                        <p class="time">
+                                            <i class="fa fa-calendar" aria-hidden="true"></i> 17/6/2021
+                                        </p>
+                                        <p class="view-count">
+                                            <i class="fa fa-eye" aria-hidden="true"></i>
+                                            <span>1</span> lượt xem
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -931,38 +866,29 @@
                                         </a>
                                 </div>
                                 <div class="description">
-                                    <p class="time">
-                                        <i class="fa fa-calendar" aria-hidden="true"></i> 17/6/2021
-                                    </p>
+                                    <div>
+                                        <p class="time">
+                                            <i class="fa fa-calendar" aria-hidden="true"></i> 17/6/2021
+                                        </p>
+                                        <p class="view-count">
+                                            <i class="fa fa-eye" aria-hidden="true"></i>
+                                            <span>1</span> lượt xem
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="col c-12 m-12 l-4">
                         <div class="row">
+                            <div class="col c-12">
+                                <div class="title small">
+                                    <h2>
+                                        <i class="fa fa-bell-o" aria-hidden="true"></i> Lịch sự kiện
+                                    </h2>
+                                </div>
+                            </div>
                             <div class="col l-12 m-6 c-12">
-                                <div class="schedule">
-                                    <div class="time">
-                                        <span class="week">Tuần 44</span>
-                                        <span class="date">20.5</span>
-                                    </div>
-                                    <div class="info">
-                                        <p class="name">Lịch làm việc tuần 44</p>
-                                        <p class="description">Từ: 01/6 - 07/6/2021</p>
-                                    </div>
-                                    <a href=""></a>
-                                </div>
-                                <div class="schedule">
-                                    <div class="time">
-                                        <span class="week">Tuần 44</span>
-                                        <span class="date">20.5</span>
-                                    </div>
-                                    <div class="info">
-                                        <p class="name">Lịch làm việc tuần 44</p>
-                                        <p class="description">Từ: 01/6 - 07/6/2021</p>
-                                    </div>
-                                    <a href=""></a>
-                                </div>
                                 <div class="schedule">
                                     <div class="time">
                                         <span class="week">Tuần 44</span>
@@ -997,11 +923,6 @@
                                         <img src="../../resources/img/viettel1.jpg" alt="">
                                     </a>
                                 </div>
-                                <div class="schedule-img">
-                                    <a href="">
-                                        <img src="../../resources/img/unnamed-1-300x163.jpg" alt="">
-                                    </a>
-                                </div>
                             </div>
                         </div>
                     </div>
@@ -1011,8 +932,8 @@
         </section>
         <!-- End notice -->
 
-        <!-- Activity -->
-        <section id="activity">
+        <!-- Activity images -->
+        <section id="activity-img" class="row-ID">
             <div class="grid wide">
                 <div class="content-row">
                     <div class="row">
@@ -1038,7 +959,7 @@
         <!-- End activity -->
 
         <!-- Product slider -->
-        <section id="product">
+        <section id="product" class="row-ID">
             <div class="grid wide content-row">
                 <div class="title">
                     <h2><i class="fa fa-book" aria-hidden="true"></i> Chuyển giao công nghệ</h2>
@@ -1118,6 +1039,188 @@
             </div>
         </section>
         <!-- End product slider -->
+
+        <!-- Activity -->
+
+        <section id="activity" class="row-ID">
+            <div class="grid wide bg-whitesmoke padd-left padd-right padd-bottom content-row">
+                <div class="row">
+                    <div class="title col c-12">
+                        <h2><i class="fa fa-calendar" aria-hidden="true"></i> Các hoạt động sinh viên</h2>
+                    </div>
+                    <div class="col c-12 m-12 l-5">
+                        <div class="news col c-12 m-12 l-12">
+                            <div class="fill-img cover img">
+                                <a href="">
+                                    <img src="../../resources/img/events-1.jpg" alt="sự kiện">
+                                </a>
+                            </div>
+                            <div class="info">
+                                <div class="name">
+                                    <a href="">
+                                    THÔNG BÁO HỘI ĐỒNG BẢO VỆ ĐỒ ÁN TỐT NGHIỆP KHOA CÔNG NGHỆ THÔNG TIN CHO SINH VIÊN ĐẠI HỌC CHÍNH QUY KHÓA 2017-2021			
+                                </a>
+                                </div>
+                                <div class="description">
+                                    <div>
+                                        <p class="time">
+                                            <i class="fa fa-calendar" aria-hidden="true"></i> 17/6/2021
+                                        </p>
+                                        <p class="view-count">
+                                            <i class="fa fa-eye" aria-hidden="true"></i>
+                                            <span>1</span> lượt xem
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col c-12 m-12 l-7">
+                        <div class="row">
+                            <div class="news horizontal col c-12">
+                                <div class="fill-img cover img">
+                                    <a href="">
+                                        <img src="../../resources/img/events-3.jpg" alt="sự kiện">
+                                    </a>
+                                </div>
+                                <div class="info">
+                                    <div class="name">
+                                        <a href="">
+                                        TB điều chỉnh kế hoạch thi tuyển sinh cao học đợt 1 năm 2021		</a>
+                                    </div>
+                                    <div class="description">
+                                        <div>
+                                            <p class="time">
+                                                <i class="fa fa-calendar" aria-hidden="true"></i> 17/6/2021
+                                            </p>
+                                            <p class="view-count">
+                                                <i class="fa fa-eye" aria-hidden="true"></i>
+                                                <span>1</span> lượt xem
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="news horizontal col c-12">
+                                <div class="fill-img cover img">
+                                    <a href="">
+                                        <img src="../../resources/img/events-4.png" alt="sự kiện">
+                                    </a>
+                                </div>
+                                <div class="info">
+                                    <div class="name">
+                                        <a href="">
+                                        Thông báo tuyển dụng Công ty cổ phần Đầu tư Công nghệ E-SPOT		
+                                    </a>
+                                    </div>
+                                    <div class="description">
+                                        <div>
+                                            <p class="time">
+                                                <i class="fa fa-calendar" aria-hidden="true"></i> 17/6/2021
+                                            </p>
+                                            <p class="view-count">
+                                                <i class="fa fa-eye" aria-hidden="true"></i>
+                                                <span>1</span> lượt xem
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="news horizontal col c-12">
+                                <div class="fill-img cover img">
+                                    <a href="">
+                                        <img src="../../resources/img/events-5.jpg" alt="sự kiện">
+                                    </a>
+                                </div>
+                                <div class="info">
+                                    <div class="name">
+                                        <a href="">
+                                        Hội thảo khoa học cấp trường: Các mô hình học máy cho khai phá dữ liệu		</a>
+                                    </div>
+                                    <div class="description">
+                                        <div>
+                                            <p class="time">
+                                                <i class="fa fa-calendar" aria-hidden="true"></i> 17/6/2021
+                                            </p>
+                                            <p class="view-count">
+                                                <i class="fa fa-eye" aria-hidden="true"></i>
+                                                <span>1</span> lượt xem
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- End activity -->
+
+        <!-- Partner slider -->
+
+        <section id="partner" class="row-ID">
+            <div class="grid wide content-row">
+                <div class="title">
+                    <h2><i class="fa fa-handshake-o" aria-hidden="true"></i> Đối tác</h2>
+                </div>
+                <div class="center slider">
+                    <div>
+                        <div class="course">
+                            <a href="">
+                                <img src="../../resources/img/brands/fsoft1-150x150.png" height="100px" width="100px">
+                            </a>
+                            <a href="" class="name">
+                            Phần mềm xử lý dữ liệu PCGD
+                        </a>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="course">
+                            <a href="">
+                                <img src="../../resources/img/brands/misa1-150x150.jpg" height="100px" width="100px">
+                            </a>
+                            <a href="" class="name">
+                            Phần mềm xử lý dữ liệu PCGD
+                        </a>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="course">
+                            <a href="">
+                                <img src="../../resources/img/brands/nhattung1-150x150.jpg" height="100px" width="100px">
+                            </a>
+                            <a href="" class="name">
+                            Phần mềm xử lý dữ liệu PCGD
+                        </a>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="course">
+                            <a href="">
+                                <img src="../../resources/img/brands/tokyo1-150x150.jpg" height="100px" width="100px">
+                            </a>
+                            <a href="" class="name">
+                            Phần mềm xử lý dữ liệu PCGD
+                        </a>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="course">
+                            <a href="">
+                                <img src="../../resources/img/brands/vnpt1-150x150.jpg" height="100px" width="100px">
+                            </a>
+                            <a href="" class="name">
+                            Phần mềm xử lý dữ liệu PCGD
+                        </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- End partner slider -->
 
     </main>
 
@@ -1224,6 +1327,10 @@
                                         <p class="time">
                                             <i class="fa fa-calendar" aria-hidden="true"></i> 17/6/2021
                                         </p>
+                                        <p class="view-count">
+                                            <i class="fa fa-eye" aria-hidden="true"></i>
+                                            <span>1</span> lượt xem
+                                        </p>
                                     </div>
                                 </div>
                             </div>
@@ -1245,6 +1352,10 @@
                                         <p class="time">
                                             <i class="fa fa-calendar" aria-hidden="true"></i> 17/6/2021
                                         </p>
+                                        <p class="view-count">
+                                            <i class="fa fa-eye" aria-hidden="true"></i>
+                                            <span>1</span> lượt xem
+                                        </p>
                                     </div>
                                 </div>
                             </div>
@@ -1254,6 +1365,14 @@
             </div>
         </div>
     </footer>
+    <!-- Template -->
+    <section class="template">
+        <div class="content-menu-item-template">
+            <div class="content-menu-item">
+                <a href="#events">Sự kiện nổi bật</a>
+            </div>
+        </div>
+    </section>
 </body>
 
 </html>

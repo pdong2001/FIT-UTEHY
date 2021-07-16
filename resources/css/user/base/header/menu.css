@@ -8,7 +8,7 @@ header .menubar .temp {
     height: auto;
     min-height: var(--height);
     display: flex;
-    box-shadow: 0px 2px 12px rgb(26 27 134 / 10%);
+    box-shadow: 0px 2px 12px rgb(26 27 134 / 35%);
     width: 100%;
 }
 
