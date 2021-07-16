@@ -6,7 +6,7 @@ header .headbar>div {
     background-color: var(--green);
     color: white;
     cursor: default;
-    z-index: 2;
+    z-index: 3;
 }
 
 head .headbar:hover {
