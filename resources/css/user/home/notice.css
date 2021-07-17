@@ -38,8 +38,7 @@
 
 .notice .content p {
     text-overflow: ellipsis;
-    text-transform: uppercase;
-    font-weight: 700;
+    font-weight: 600;
     display: -webkit-box;
     -webkit-line-clamp: 3;
     overflow: hidden;

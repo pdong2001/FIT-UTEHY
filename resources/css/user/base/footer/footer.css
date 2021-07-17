@@ -16,19 +16,11 @@ footer .title {
 footer .title h2 {
     color: var(--color);
     border-color: var(--color);
-    font-size: var(--fs-medium-l);
+    font-size: var(--fs-large);
 }
 
 .news.horizontal.scope {
     --size: 150px;
-}
-
-.news.horizontal.scope .name a {
-    font-size: inherit !important;
-}
-
-.news .content {
-    font-size: smaller;
 }
 
 .news.horizontal {
@@ -56,13 +48,17 @@ footer .title h2 {
 }
 
 .news.horizontal .info .name a {
-    font-size: smaller;
+    font-size: var(--fs-medium);
     color: var(--color);
     display: -webkit-box;
     -webkit-line-clamp: 3;
     overflow: hidden;
     -webkit-box-orient: vertical;
     text-overflow: ellipsis;
+}
+
+footer .news.horizontal .time {
+    border-color: var(--color) !important;
 }
 
 footer .get-info {
@@ -75,7 +71,7 @@ footer .get-info input {
     margin: 5px 0px;
     padding: 5px;
     border: none;
-    border-bottom: 3px solid var(--color);
+    border-bottom: 1px solid var(--color);
     outline: none;
     background-color: var(--blue);
     width: 100%;

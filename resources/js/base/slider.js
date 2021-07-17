@@ -7,15 +7,13 @@ $(document).ready(function() {
         adaptiveHeight: true,
         autoplay: true,
         pauseOnFocus: true,
-        autoplaySpeed: 5000,
-
+        autoplaySpeed: 5000
     });
     $(".center.slider").slick({
         dots: false,
         infinite: true,
         slidesToShow: 4,
         slidesToScroll: 2,
-        arrows: false,
         autoplay: true,
         pauseOnFocus: true,
         autoplaySpeed: 5000,

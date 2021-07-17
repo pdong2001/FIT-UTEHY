@@ -1,14 +1,43 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Roboto:wght@300;400;700&display=swap');
+@font-face {
+    font-family: baomoi;
+    src: url('https://baomoi-static.zadn.vn/web/styles/fonts/baomoi/2.0.2/baomoi-light-2.0.2.woff2') format('woff2'), url('https://baomoi-static.zadn.vn/web/styles/fonts/baomoi/2.0.2/baomoi-light-2.0.2.woff') format('woff');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: baomoi;
+    src: url('https://baomoi-static.zadn.vn/web/styles/fonts/baomoi/2.0.2/baomoi-light-italic-2.0.2.woff2') format('woff2'), url('https://baomoi-static.zadn.vn/web/styles/fonts/baomoi/2.0.2/baomoi-light-italic-2.0.2.woff') format('woff');
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: baomoi;
+    src: url('https://baomoi-static.zadn.vn/web/styles/fonts/baomoi/2.0.2/baomoi-regular-2.0.2.woff2') format('woff2'), url('https://baomoi-static.zadn.vn/web/styles/fonts/baomoi/2.0.2/baomoi-regular-2.0.2.woff') format('woff');
+    font-weight: bold;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: baomoi;
+    src: url('https://baomoi-static.zadn.vn/web/styles/fonts/baomoi/2.0.2/baomoi-regular-2.0.2.woff2') format('woff2'), url('https://baomoi-static.zadn.vn/web/styles/fonts/baomoi/2.0.2/baomoi-regular-2.0.2.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    text-rendering: optimizeLegibility;
 }
 
 html,
 body {
     min-height: 100vh;
-    font-family: 'Roboto', sans-serif;
+    font-family: baomoi, AvenirNextCondensed-Medium, HelveticaNeue-CondensedBold, "sans-serif-condensed", Calibri, Corbel, Liberation Sans Narrow, Lohit Odia, sans-serif;
 }
 
 .nowrap {
@@ -29,6 +58,14 @@ body {
 
 .flex.jc-center {
     justify-content: center;
+}
+
+.flex.jc-end {
+    justify-content: flex-end;
+}
+
+.flex.jc-start {
+    justify-self: start;
 }
 
 .flex.middle {

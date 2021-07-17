@@ -5,9 +5,11 @@ $(document).ready(function() {
         var temp = contentMenuItemTemplate.clone();
         temp.find('a').attr('href', '#' + $(this).attr('id'))
         temp.removeClass('content-menu-item-template');
-        temp.find('a').html($(this).find('.title:first-of-type h2').html());
+        temp.find('a').append($(this).find('.title:first-of-type h2').children()[0]);
+        var p = document.createElement('p');
+        $(p).html($(this).find('.title:first-of-type h2').text());
+        $(p).appendTo(temp.find('a'));
         temp.appendTo(contentMenu);
-        console.log(temp);
     });
     $('.content-menu-item').click(function() {
         $('.content-menu-item.active').removeClass("active");
