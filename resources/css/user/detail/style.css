@@ -106,3 +106,41 @@
 .relate-news__item a p {
     font-size: var(--fs-small);
 }
+
+.interactive .like, .interactive .share {
+    background-color: #0082FE;
+    color: #fff;
+    outline: none;
+    border: none;
+    padding: 3px;
+    border-radius: 3px;
+    margin: 0 5px;
+}
+
+.interactive>div {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.interactive>form>textarea {
+    box-shadow: none;
+    border: 1px solid #eeeeee;
+    outline-color: #eeeeee;
+    font-size: var(--fs-medium-l);
+    padding-left: 10px;
+    padding-top: 10px;
+    resize: none;
+    margin: 15px 0 10px 0;
+}
+
+.interactive>form>button {
+    font-size: 15px;
+    padding: 8px 22px;
+    line-height: 1.38;
+    color: #fff;
+    background-color: #222222;
+    border-color: #222222;
+    cursor: pointer;
+    float: right;
+    margin-bottom: 20px;
+}

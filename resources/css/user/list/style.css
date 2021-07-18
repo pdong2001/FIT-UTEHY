@@ -22,6 +22,12 @@
 
 
 /* list article start */
+.article__container {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 25px;
+}
+
 .list-article {
     margin-top: 40px;
 }
