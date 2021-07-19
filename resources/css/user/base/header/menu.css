@@ -1,10 +1,11 @@
 header .menubar,
 header .menubar .temp {
+    font-family: Inter, sans-serif;
     z-index: 2;
-    position: relative;
     height: auto;
     --height: 50px;
     --items-height: 25px;
+    --large-icons: 50px;
     height: auto;
     min-height: var(--height);
     display: flex;
@@ -14,6 +15,7 @@ header .menubar .temp {
 
 header .menubar .grid {
     border-top: 3px solid var(--yellow);
+    position: relative;
 }
 
 header .menu-item {
@@ -25,18 +27,50 @@ header .menu-item a,
 header .menu-item>*:not(:is(div, ul)):first-child {
     color: black;
     padding: 10px;
-    margin: 0px 15px;
     display: flex;
     align-items: center;
 }
 
 header .menu-item a img {
-    height: var(--items-height);
-    width: var(--items-height);
+    min-height: var(--large-icons);
+    min-width: var(--large-icons);
+    max-height: var(--large-icons);
+    max-width: var(--large-icons);
     margin-right: 10px;
     fill: black;
     border: none;
     overflow: hidden;
+    flex-basis: 100%;
+}
+
+header .menu-item a div {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+header .menu-item .grid-4 a div {
+    justify-content: center;
+    align-items: center;
+}
+
+header .menu-item .grid-4 a div span {
+    display: block;
+    text-align: center;
+}
+
+header .menu-item a span {
+    white-space: normal;
+}
+
+header .menu-item a span:last-child {
+    display: -webkit-box;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    font-weight: 400;
+    font-size: var(--fs-small);
 }
 
 header .menu-item:hover>a {
@@ -47,11 +81,8 @@ header .navbar .dropdown-menu:hover .dropdown-content,
 header .navbar .dropdown-content:is(.visible) {
     box-shadow: 0px 2px 12px rgb(26 27 134 / 10%);
     padding: 10px;
-    display: grid;
-    grid-template-columns: repeat(3, auto);
     background-color: white;
     width: 100%;
-    grid-gap: 10px;
 }
 
 header .menubar .dropdown-menu-item {
@@ -64,7 +95,6 @@ header .dropdown-content a {
     color: black;
     font-size: var(--fs-medium);
     width: 100%;
-    height: var(--items-height);
     box-sizing: content-box;
 }
 
@@ -114,7 +144,7 @@ header .navbar {
     align-items: center;
     height: var(--height);
     flex-wrap: nowrap;
-    position: relative;
+    position: static;
 }
 
 header .nav-btn {
@@ -131,11 +161,21 @@ header .nav-btn {
 header .menubar .logo {
     width: auto;
     height: var(--height);
+    display: flex;
+    justify-content: flex-start;
+}
+
+header .menubar .logo span {
+    margin-left: 10px;
+    text-transform: none;
 }
 
 header .menubar .logo img {
     height: var(--height);
     width: var(--height);
+}
+
+header .menubar .logo a {
     display: none;
 }
 
@@ -148,8 +188,9 @@ header .menubar .temp.fixed {
     z-index: 1;
 }
 
-header .menubar .temp.fixed .logo img {
-    display: block;
+header .menubar .temp.fixed .logo a {
+    display: flex;
+    align-items: center;
 }
 
 header .search-bar {
@@ -175,6 +216,7 @@ header .search-bar form div {
     display: flex;
     align-items: center;
     overflow: visible;
+    flex-grow: 1;
 }
 
 header .search-bar .title-only {
@@ -194,6 +236,7 @@ header .search-bar :is(input, select) {
     border-bottom: 1px solid var(--blue);
     padding: 2px 5px;
     outline: none;
+    flex-grow: 1;
 }
 
 header .search-bar .time span {

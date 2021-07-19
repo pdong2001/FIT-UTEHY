@@ -1,7 +1,7 @@
 footer {
     --color: #ffffff;
     background-color: var(--blue);
-    padding: 10px;
+    padding-top: 10px;
     bottom: 0px;
 }
 
@@ -51,7 +51,7 @@ footer .title h2 {
     font-size: var(--fs-medium);
     color: var(--color);
     display: -webkit-box;
-    -webkit-line-clamp: 3;
+    -webkit-line-clamp: 2 !important;
     overflow: hidden;
     -webkit-box-orient: vertical;
     text-overflow: ellipsis;
@@ -99,4 +99,9 @@ footer .get-info button:hover {
 footer .infomation span {
     display: block;
     margin: 10px 0px;
+}
+
+footer .copyright {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
 }

@@ -5,7 +5,7 @@ $(document).ready(function() {
         var temp = contentMenuItemTemplate.clone();
         temp.find('a').attr('href', '#' + $(this).attr('id'))
         temp.removeClass('content-menu-item-template');
-        temp.find('a').append($(this).find('.title:first-of-type h2').children()[0].clone());
+        temp.find('a').append($(this).find('.title:first-of-type h2').children().clone()[0]);
         var p = document.createElement('p');
         $(p).html($(this).find('.title:first-of-type h2').text());
         $(p).appendTo(temp.find('a'));

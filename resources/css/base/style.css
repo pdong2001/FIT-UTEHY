@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Roboto:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600&family=Raleway:ital,wght@0,200;0,300;0,400;0,500;0,600;1,200;1,300&display=swap');
 @font-face {
     font-family: baomoi;
     src: url('https://baomoi-static.zadn.vn/web/styles/fonts/baomoi/2.0.2/baomoi-light-2.0.2.woff2') format('woff2'), url('https://baomoi-static.zadn.vn/web/styles/fonts/baomoi/2.0.2/baomoi-light-2.0.2.woff') format('woff');
@@ -37,6 +37,7 @@
 html,
 body {
     min-height: 100vh;
+    background-color: white;
     font-family: baomoi, AvenirNextCondensed-Medium, HelveticaNeue-CondensedBold, "sans-serif-condensed", Calibri, Corbel, Liberation Sans Narrow, Lohit Odia, sans-serif;
 }
 
@@ -78,6 +79,9 @@ body {
 
 .navbar {
     display: flex;
+}
+
+.navbar li {
     list-style: none;
 }
 
@@ -257,4 +261,30 @@ img {
     background: none;
     outline: none;
     cursor: pointer;
+}
+
+.dropdown-content {
+    display: flex;
+}
+
+.title {
+    margin-bottom: 10px;
+}
+
+.title span {
+    font-weight: 600;
+    font-size: var(--fs-medium-l);
+    font-family: Inter, Arial, Helvetica, sans-serif;
+}
+
+.title .underline {
+    display: block;
+    height: 3px;
+    width: 100px;
+    background-color: var(--blue);
+}
+
+.dropdown-content.grid-4 {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
 }
