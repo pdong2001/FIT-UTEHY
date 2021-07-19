@@ -22,6 +22,8 @@ header .logo>div {
 header .logo img {
     height: var(--logo-size);
     width: var(--logo-size);
+    max-height: unset;
+    max-width: unset;
 }
 
 header .logo h1 {

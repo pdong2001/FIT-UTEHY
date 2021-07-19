@@ -7,15 +7,13 @@ $(document).ready(function() {
         adaptiveHeight: true,
         autoplay: true,
         pauseOnFocus: true,
-        autoplaySpeed: 5000,
-
+        autoplaySpeed: 5000
     });
     $(".center.slider").slick({
         dots: false,
         infinite: true,
         slidesToShow: 4,
         slidesToScroll: 2,
-        arrows: false,
         autoplay: true,
         pauseOnFocus: true,
         autoplaySpeed: 5000,
@@ -24,6 +22,7 @@ $(document).ready(function() {
                 settings: {
                     slidesToShow: 3,
                     slidesToScroll: 1,
+                    arrows: false
                 }
             },
             {
@@ -31,7 +30,7 @@ $(document).ready(function() {
                 settings: {
                     slidesToShow: 2,
                     slidesToScroll: 1,
-
+                    arrows: false
                 }
             },
             {
@@ -39,6 +38,7 @@ $(document).ready(function() {
                 settings: {
                     slidesToShow: 1,
                     slidesToScroll: 1,
+                    arrows: false
                 }
             }
         ]

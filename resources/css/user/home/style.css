@@ -15,12 +15,11 @@
 
 .title h2 {
     font-size: var(--fs-large);
-    font-weight: 700;
+    font-weight: 600;
     color: var(--blue);
     display: inline;
     padding: 10px 0px;
     display: inline-block;
-    border-bottom: 3px solid var(--blue);
     text-transform: uppercase;
     user-select: none;
     -webkit-user-select: none;
