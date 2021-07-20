@@ -2,12 +2,13 @@ $(document).ready(function() {
     $(".lazy").slick({
         dots: true,
         infinite: true,
-        speed: 300,
+        speed: 1000,
         slidesToShow: 1,
         adaptiveHeight: true,
         autoplay: true,
         pauseOnFocus: true,
-        autoplaySpeed: 5000
+        autoplaySpeed: 5000,
+        cssEase: 'cubic-bezier(0.7, 0, 0.3, 1)'
     });
     $(".center.slider").slick({
         dots: false,

@@ -51,15 +51,14 @@
     background-color: var(--red);
 }
 
-
-/* @media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 1200px) {
     .content-menu-item {
-        height: 3em;
+        height: auto;
     }
 }
 
-@media only screen and (min-width: 644px) {
+@media only screen and (max-width: 1199px) {
     .content-menu-item {
-        height: 4em;
+        height: 4.5em;
     }
-} */
+}

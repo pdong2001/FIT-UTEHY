@@ -289,7 +289,7 @@ img {
 
 .dropdown-menu.grid-4 .dropdown-content {
     display: grid;
-    grid-template-columns: repeat(4, auto);
+    grid-template-columns: repeat(4, 25%);
 }
 
 .dropdown-menu.grid-1 .dropdown-content {

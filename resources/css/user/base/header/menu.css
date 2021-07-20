@@ -11,6 +11,7 @@ header .menubar .temp {
     display: flex;
     box-shadow: 0px 2px 12px rgb(26 27 134 / 15%);
     width: 100%;
+    font-family: Inter, sans-serif;
 }
 
 header .menubar .grid {
@@ -50,7 +51,7 @@ header .menu-item a div {
 }
 
 header .dropdown-menu.grid-4 a div {
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
 }
 
@@ -64,7 +65,7 @@ header .menu-item a span {
 }
 
 header .menu-item a span:last-child {
-    display: -webkit-box;
+    display: -webkit-box !important;
     text-overflow: ellipsis;
     overflow: hidden;
     -webkit-line-clamp: 2;
@@ -113,7 +114,8 @@ header .dropdown-menu-item a:hover {
 
 header .educate .dropdown-menu-item a {
     flex-direction: column;
-    height: auto;
+    height: 100%;
+    box-sizing: border-box;
 }
 
 header .educate .dropdown-menu-item a img {
