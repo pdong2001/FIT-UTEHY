@@ -268,7 +268,9 @@ img {
 }
 
 .title {
+    display: flex;
     margin-bottom: 10px;
+    flex-direction: column;
 }
 
 .title span {
@@ -284,7 +286,21 @@ img {
     background-color: var(--blue);
 }
 
-.dropdown-content.grid-4 {
+.dropdown-menu.grid-4 .dropdown-content {
     display: grid;
     grid-template-columns: repeat(4, auto);
+}
+
+.dropdown-menu.grid-1 .dropdown-content {
+    display: grid;
+    grid-template-columns: auto;
+}
+
+.dropdown-menu.grid-1 {
+    position: relative;
+}
+
+.dropdown-menu.grid-1:hover .dropdown-content,
+.dropdown-menu.grid-1 .dropdown-content:is(.visible) {
+    width: auto !important;
 }

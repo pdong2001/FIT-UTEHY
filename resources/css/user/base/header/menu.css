@@ -49,12 +49,12 @@ header .menu-item a div {
     flex-direction: column;
 }
 
-header .menu-item .grid-4 a div {
+header .dropdown-menu.grid-4 a div {
     justify-content: center;
     align-items: center;
 }
 
-header .menu-item .grid-4 a div span {
+header .dropdown-menu.grid-4 a div span {
     display: block;
     text-align: center;
 }
@@ -122,18 +122,18 @@ header .educate .dropdown-menu-item a img {
     margin-bottom: 10px;
 }
 
-header :is(.research, .admissions, .events) {
+header :is(.research, .events) {
     display: flex !important;
     align-items: flex-start !important;
 }
 
-header :is(.research, .admissions, .events)>div:first-child {
+header :is(.research, .events)>div:first-child {
     width: 40%;
     height: 200px;
     box-shadow: 0px 2px 12px 5px rgb(26 27 134 / 10%);
 }
 
-header :is(.research, .admissions, .events)>div:last-child {
+header :is(.research, .events)>div:last-child {
     display: grid;
     grid-template-columns: repeat(2, auto);
     width: 60%;
