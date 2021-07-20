@@ -273,10 +273,11 @@ img {
     flex-direction: column;
 }
 
-.title span {
+.title>span {
     font-weight: 600;
     font-size: var(--fs-medium-l);
     font-family: Inter, Arial, Helvetica, sans-serif;
+    margin: 5px 0px;
 }
 
 .title .underline {

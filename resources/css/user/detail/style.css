@@ -16,15 +16,18 @@
     justify-content: flex-end;
 }
 
-.tags, .keys {
-    margin: 25px 0;
+.tags,
+.keys {
+    margin-top: 25px;
+    margin-bottom: 25px;
 }
 
 .tags h4 {
     margin-bottom: 8px;
 }
 
-.tag-list, .key-list {
+.tag-list,
+.key-list {
     list-style: none;
     display: flex;
     justify-content: flex-start;
@@ -59,11 +62,13 @@
     display: flex;
 }
 
-.news, .relate-news {
+.news,
+.relate-news {
     margin-top: 25px;
 }
 
-.news h2, .relate-news h2 {
+.news h2,
+.relate-news h2 {
     border-bottom: 2px solid var(--black);
     display: inline-block;
 }
@@ -107,7 +112,8 @@
     font-size: var(--fs-small);
 }
 
-.interactive .like, .interactive .share {
+.interactive .like,
+.interactive .share {
     background-color: #0082FE;
     color: #fff;
     outline: none;
